@@ -1,2 +1,9 @@
-Test By Kermit 00
-Test By Kermit 01
+XML Virtual Keyboard
+
+    Xml Virtual Keyboard is an virtual keyboard which can be defined by xml.
+    You can use it as a global virtual keyboard, or just a modules in your 
+applications.
+
+Author:
+Yaming Liu (liuyaming1003@gmail.com)
+Kermit Mei (kermit.mei@gmail.com)

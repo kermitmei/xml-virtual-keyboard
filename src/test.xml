@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keyboard>
+  <key x="0" y="0" width="100" heigth="50" text="1/2"/>
+  <key x="82" y="99" width="50" heigth="30" text="z"/>
+  <key x="345" y="-3" width="50" heigth="30" text="y"/>
+  <key x="141" y="101" width="50" heigth="30" text="x"/>
+  <key x="86" y="-2" width="50" heigth="30" text="w"/>
+  <key x="286" y="103" width="50" heigth="30" text="v"/>
+  <key x="406" y="-3" width="50" heigth="30" text="u"/>
+  <key x="279" y="-2" width="50" heigth="30" text="t"/>
+  <key x="116" y="50" width="50" heigth="30" text="s"/>
+  <key x="213" y="-3" width="50" heigth="30" text="r"/>
+  <key x="20" y="-1" width="50" heigth="30" text="q"/>
+  <key x="615" y="-4" width="50" heigth="30" text="p"/>
+  <key x="540" y="-3" width="50" heigth="30" text="o"/>
+  <key x="440" y="102" width="50" heigth="30" text="n"/>
+  <key x="504" y="99" width="50" heigth="30" text="m"/>
+  <key x="601" y="44" width="50" heigth="30" text="l"/>
+  <key x="533" y="42" width="50" heigth="30" text="k"/>
+  <key x="464" y="46" width="50" heigth="30" text="j"/>
+  <key x="474" y="-1" width="50" heigth="30" text="i"/>
+  <key x="392" y="47" width="50" heigth="30" text="h"/>
+  <key x="326" y="49" width="50" heigth="30" text="g"/>
+  <key x="259" y="51" width="50" heigth="30" text="f"/>
+  <key x="365" y="101" width="50" heigth="30" text="b"/>
+  <key x="186" y="50" width="50" heigth="30" text="d"/>
+  <key x="212" y="101" width="50" heigth="30" text="c"/>
+  <key x="151" y="-3" width="50" heigth="30" text="e"/>
+  <key x="43" y="51" width="50" heigth="30" text="a"/>
+</keyboard>
