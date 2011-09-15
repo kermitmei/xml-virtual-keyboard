@@ -1,66 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keyboard>
-    <key x="815" y="230" width="70" heigth="50" text="Ctrl" keycode="0" background="./btn.png"/>
-    <key x="760" y="230" width="50" heigth="50" text="右" keycode="114" background="./btn.png"/>
-    <key x="705" y="230" width="50" heigth="50" text="下" keycode="116" background="./btn.png"/>
-    <key x="650" y="230" width="50" heigth="50" text="左" keycode="113" background="./btn.png"/>
-    <key x="595" y="230" width="50" heigth="50" text="Alt" keycode="108" background="./btn.png"/>
-    <key x="165" y="230" width="425" heigth="50" text="Space" keycode="65" background="./btn.png"/>
-    <key x="110" y="230" width="50" heigth="50" text="Alt" keycode="64" background="./btn.png"/>
-    <key x="55" y="230" width="50" heigth="50" text="?" keycode="133" background="./btn.png"/>
-    <key x="0" y="230" width="50" heigth="50" text="Ctrl" keycode="37" background="./btn.png"/>
-    <key x="0" y="175" width="150" heigth="50" text="Shift" keycode="50" background="./btn.png"/>
-    <key x="0" y="120" width="130" heigth="50" text="Caps Lock" keycode="66" background="./btn.png"/>
-    <key x="155" y="175" width="50" heigth="50" text="z" keycode="52" background="./btn.png"/>
-    <key x="390" y="65" width="50" heigth="50" text="y" keycode="29" background="./btn.png"/>
-    <key x="210" y="175" width="50" heigth="50" text="x" keycode="53" background="./btn.png"/>
-    <key x="170" y="65" width="50" heigth="50" text="w" keycode="25" background="./btn.png"/>
-    <key x="320" y="175" width="50" heigth="50" text="v" keycode="55" background="./btn.png"/>
-    <key x="445" y="65" width="50" heigth="50" text="u" keycode="30" background="./btn.png"/>
-    <key x="335" y="65" width="50" heigth="50" text="t" keycode="28" background="./btn.png"/>
-    <key x="190" y="120" width="50" heigth="50" text="s" keycode="39" background="./btn.png"/>
-    <key x="280" y="65" width="50" heigth="50" text="r" keycode="27" background="./btn.png"/>
-    <key x="115" y="65" width="50" heigth="50" text="q" keycode="24" background="./btn.png"/>
-    <key x="775" y="65" width="110" heigth="50" text="\" keycode="51" background="./btn.png"/>
-    <key x="720" y="65" width="50" heigth="50" text="]" keycode="35" background="./btn.png"/>
-    <key x="665" y="65" width="50" heigth="50" text="[" keycode="34" background="./btn.png"/>
-    <key x="610" y="65" width="50" heigth="50" text="p" keycode="33" background="./btn.png"/>
-    <key x="555" y="65" width="50" heigth="50" text="o" keycode="32" background="./btn.png"/>
-    <key x="430" y="175" width="50" heigth="50" text="n" keycode="57" background="./btn.png"/>
-    <key x="760" y="175" width="125" heigth="50" text="Shift" keycode="62" background="./btn.png"/>
-    <key x="705" y="175" width="50" heigth="50" text="上" keycode="111" background="./btn.png"/>
-    <key x="650" y="175" width="50" heigth="50" text="/" keycode="61" background="./btn.png"/>
-    <key x="595" y="175" width="50" heigth="50" text="." keycode="60" background="./btn.png"/>
-    <key x="540" y="175" width="50" heigth="50" text="," keycode="59" background="./btn.png"/>
-    <key x="485" y="175" width="50" heigth="50" text="m" keycode="58" background="./btn.png"/>
-    <key x="740" y="120" width="145" heigth="50" text="Enter" keycode="36" background="./btn.png"/>
-    <key x="685" y="120" width="50" heigth="50" text="'" keycode="48" background="./btn.png"/>
-    <key x="630" y="120" width="50" heigth="50" text=";" keycode="47" background="./btn.png"/>
-    <key x="575" y="120" width="50" heigth="50" text="l" keycode="46" background="./btn.png"/>
-    <key x="520" y="120" width="50" heigth="50" text="k" keycode="45" background="./btn.png"/>
-    <key x="465" y="120" width="50" heigth="50" text="j" keycode="44" background="./btn.png"/>
-    <key x="500" y="65" width="50" heigth="50" text="i" keycode="31" background="./btn.png"/>
-    <key x="410" y="120" width="50" heigth="50" text="h" keycode="43" background="./btn.png"/>
-    <key x="355" y="120" width="50" heigth="50" text="g" keycode="42" background="./btn.png"/>
-    <key x="300" y="120" width="50" heigth="50" text="f" keycode="41" background="./btn.png"/>
-    <key x="375" y="175" width="50" heigth="50" text="b" keycode="56" background="./btn.png"/>
-    <key x="245" y="120" width="50" heigth="50" text="d" keycode="40" background="./btn.png"/>
-    <key x="265" y="175" width="50" heigth="50" text="c" keycode="54" background="./btn.png"/>
-    <key x="225" y="65" width="50" heigth="50" text="e" keycode="26" background="./btn.png"/>
-    <key x="135" y="120" width="50" heigth="50" text="a" keycode="38" background="./btn.png"/>
-    <key x="0" y="65" width="110" heigth="50" text="Tab" keycode="23" background="./btn.png"/>
-    <key x="755" y="10" width="130" heigth="50" text="Backspace" keycode="22" background="./btn.png"/>
-    <key x="700" y="10" width="50" heigth="50" text="=" keycode="21" background="./btn.png"/>
-    <key x="645" y="10" width="50" heigth="50" text="-" keycode="20" background="./btn.png"/>
-    <key x="590" y="10" width="50" heigth="50" text="0" keycode="19" background="./btn.png"/>
-    <key x="535" y="10" width="50" heigth="50" text="9" keycode="18" background="./btn.png"/>
-    <key x="480" y="10" width="50" heigth="50" text="8" keycode="17" background="./btn.png"/>
-    <key x="425" y="10" width="50" heigth="50" text="7" keycode="16" background="./btn.png"/>
-    <key x="370" y="10" width="50" heigth="50" text="6" keycode="15" background="./btn.png"/>
-    <key x="315" y="10" width="50" heigth="50" text="5" keycode="14" background="./btn.png"/>
-    <key x="260" y="10" width="50" heigth="50" text="4" keycode="13" background="./btn.png"/>
-    <key x="205" y="10" width="50" heigth="50" text="3" keycode="12" background="./btn.png"/>
-    <key x="150" y="10" width="50" heigth="50" text="2" keycode="11" background="./btn.png"/>
-    <key x="95" y="10" width="50" heigth="50" text="1" keycode="10" background="./btn.png"/>
-    <key x="0" y="10" width="90" heigth="50" text="`" keycode="49" background="./btn.png"/>
-</keyboard>
+<view>
+  <keyboard id="1" x="0" y="0" width="200" height="200">
+    <page pagekey="1">
+      <key x="60" y="0" width="50" height="50" text="上" keycode="" background="" id="" />
+      <key x="60" y="120" width="50" height="50" text="下" keycode="" background="" id="" />
+      <key x="0" y="60" width="50" height="50" text="左" keycode="" background="" id="" />
+      <key x="120" y="60" width="50" height="50" text="右" keycode="" background="" id="" />
+      <key x="150" y="150" width="40" height="20" text="1/2" keycode="" background="" id="" />
+    </page>
+    <page pagekey="2">
+      <key x="150" y="150" width="40" height="20" text="2/2" keycode="" background="" id="" />
+    </page>
+  </keyboard>
+  <keyboard id="2" x="300" y="0" width="200" height="200">
+    <page pagekey="1">
+      <key x="10" y="10" width="50" height="50" text="A" keycode="" background="" id="" />
+      <key x="110" y="10" width="50" height="50" text="B" keycode="" background="" id="" />
+      <key x="10" y="110" width="50" height="50" text="C" keycode="" background="" id="" />
+      <key x="110" y="110" width="50" height="50" text="D" keycode="" background="" id="" />
+    </page>
+  </keyboard>
+</view>

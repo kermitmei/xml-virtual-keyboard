@@ -12,5 +12,14 @@ QT += xml
 CONFIG += debug
 
 # Input
-HEADERS += ItemData.h MyItem.h MyStreamReader.h Widget.h MyScene.h UinputInterfact.h DropView.h MyMimeData.h
-SOURCES += main.cpp MyItem.cpp MyStreamReader.cpp Widget.cpp MyScene.cpp UinputInterfact.c DropView.cpp 
+HEADERS += KbReadXml.h                 \
+           ./data/KbAttribute.h        \
+           ./data/PageAttribute.h      \
+           ./data/KeyAttribute.h       \
+           KbItem.h                    \
+           KbView.h                    \
+           
+SOURCES += main.cpp           \
+           KbReadXml.cpp      \
+           KbItem.cpp         \
+           KbView.cpp         \
