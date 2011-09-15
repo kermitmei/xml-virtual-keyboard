@@ -35,6 +35,13 @@ public:
     void setBackground(QString background = NULL)
     {
 	m_background = background;
+	m_pixmap = new QPixmap(m_background);
+	if(m_pixmap->isNull())
+	{
+	    qDebug("m_pixmap is null");
+	    delete m_pixmap;
+	    m_pixmap = 0;
+	}
     }
     int width() const
     {
@@ -62,5 +69,6 @@ private:
     int     m_keycode;
     QString m_text;
     QString m_background;
+    QPixmap *m_pixmap;
 };
 #endif//_KBITEM_H_

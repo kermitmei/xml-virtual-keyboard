@@ -34,6 +34,10 @@ public:
     {
 	m_keycode = keycode;
     }
+    void setBackground(QString background = NULL)
+    {
+	m_background = background;
+    }
     //get Foundation
     int x() const
     {
@@ -59,12 +63,17 @@ public:
     {
 	return m_keycode;
     }
+    QString background() const
+    {
+	return m_background;
+    }
 private:
     int m_x;
     int m_y;
     int m_width;
     int m_height;
-    QString m_text;
     int m_keycode;
+    QString m_text;
+    QString m_background;
 };
 #endif//_KEYATTRIBUTE_H_

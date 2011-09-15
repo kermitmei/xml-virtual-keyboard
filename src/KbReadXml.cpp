@@ -154,6 +154,7 @@ void KbReadXml::readKeyElement()
     m_key->setWidth(reader.attributes().value("width").toString().toInt());
     m_key->setHeight(reader.attributes().value("height").toString().toInt());
     m_key->setText(reader.attributes().value("text").toString());
+    m_key->setBackground(reader.attributes().value("background").toString());
     m_page->keyList().append(m_key);
     reader.readNext();
     while(!reader.atEnd())
@@ -262,6 +263,7 @@ void KbReadXml::initView()
 		    item->setHeight(key->height());
 		    item->setText(key->text());
 		    item->setKeycode(key->keycode());
+		    item->setBackground(key->background());
 		    m_scene->addItem(item);
 		}
 		m_view->sceneList().append(m_scene);
