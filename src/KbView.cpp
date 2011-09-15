@@ -1,5 +1,5 @@
 #include "KbView.h"
-
+#include "KbItem.h"
 
 KbView::KbView(QWidget *parent ) : QGraphicsView(parent),m_count(1)
 {
@@ -9,16 +9,14 @@ KbView::KbView(QWidget *parent ) : QGraphicsView(parent),m_count(1)
 void KbView::mousePressEvent(QMouseEvent *event)
 {
     qDebug("KbView::mousePressEvent");
-    if(m_count <= m_sceneList.count() -1)
+    KbItem *item = dynamic_cast<KbItem *>(itemAt(event->pos()));
+    qDebug("keycode = %d", item->keycode());
+    qDebug("count = %d", m_sceneList.count());
+    if( item != 0 && item->keycode() <= m_sceneList.count() -1)
     {
-	setSceneNum(m_count);
-	m_count++;
+	qDebug("scene");
+	setSceneNum(item->keycode());
     }
-    else
-    {
-	m_count = 0;
-	setSceneNum(m_count);
-	m_count++;
-    }
+
     QGraphicsView::mousePressEvent(event);
 }

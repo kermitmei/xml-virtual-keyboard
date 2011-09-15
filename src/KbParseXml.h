@@ -1,5 +1,5 @@
-#ifndef _MYSTREAMREADER_H_
-#define _MYSTREAMREADER_H_
+#ifndef _KBPARSEXML_H_
+#define _KBPARSEXML_H_
 
 #include <QtXml>
 #include <QtGui>
@@ -11,10 +11,10 @@
 #include "KbItem.h"
 #include "KbView.h"
 
-class KbReadXml
+class KbParseXml
 {
 public:
-    KbReadXml();;
+    KbParseXml();;
     bool readFile(QString fileName);
 
     //write ItemData in xml
@@ -39,4 +39,4 @@ private:
     PageAttribute           *m_page;
     KeyAttribute            *m_key;
 };
-#endif
+#endif//_KBPARSEXML_H_

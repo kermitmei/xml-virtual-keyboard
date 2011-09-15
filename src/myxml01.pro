@@ -12,7 +12,7 @@ QT += xml
 CONFIG += debug
 
 # Input
-HEADERS += KbReadXml.h                 \
+HEADERS += KbParseXml.h                 \
            ./data/KbAttribute.h        \
            ./data/PageAttribute.h      \
            ./data/KeyAttribute.h       \
@@ -20,6 +20,6 @@ HEADERS += KbReadXml.h                 \
            KbView.h                    \
            
 SOURCES += main.cpp           \
-           KbReadXml.cpp      \
+           KbParseXml.cpp      \
            KbItem.cpp         \
            KbView.cpp         \

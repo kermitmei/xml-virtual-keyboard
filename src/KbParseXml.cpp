@@ -1,12 +1,12 @@
-#include "KbReadXml.h"
+#include "KbParseXml.h"
 #include <QVariant>
 
-KbReadXml::KbReadXml()
+KbParseXml::KbParseXml()
 {
 
 }
 
-bool KbReadXml::readFile(QString fileName)
+bool KbParseXml::readFile(QString fileName)
 {
     QFile file(fileName);
 
@@ -50,7 +50,7 @@ bool KbReadXml::readFile(QString fileName)
     return true;
 }
 
-void KbReadXml::readViewElement()
+void KbParseXml::readViewElement()
 {
     reader.readNext();
     while(!reader.atEnd())
@@ -79,7 +79,7 @@ void KbReadXml::readViewElement()
     }
 }
 
-void KbReadXml::readKeyboardElement()
+void KbParseXml::readKeyboardElement()
 {
     m_kb = new KbAttribute;
     m_kb->setId(reader.attributes().value("id").toString().toInt());
@@ -114,7 +114,7 @@ void KbReadXml::readKeyboardElement()
     }
 }
 
-void KbReadXml::readPageElement()
+void KbParseXml::readPageElement()
 {
     m_page = new PageAttribute;
     m_page->setPagekey(reader.attributes().value("pagekey").toString().toInt());
@@ -146,7 +146,7 @@ void KbReadXml::readPageElement()
     }
 }
 
-void KbReadXml::readKeyElement()
+void KbParseXml::readKeyElement()
 {
     m_key = new KeyAttribute;
     m_key->setX(reader.attributes().value("x").toString().toInt());
@@ -154,6 +154,7 @@ void KbReadXml::readKeyElement()
     m_key->setWidth(reader.attributes().value("width").toString().toInt());
     m_key->setHeight(reader.attributes().value("height").toString().toInt());
     m_key->setText(reader.attributes().value("text").toString());
+    m_key->setKeycode(reader.attributes().value("keycode").toString().toInt());
     m_key->setBackground(reader.attributes().value("background").toString());
     m_page->keyList().append(m_key);
     reader.readNext();
@@ -173,7 +174,7 @@ void KbReadXml::readKeyElement()
 
 
 
-void KbReadXml::skipUnknownElement()
+void KbParseXml::skipUnknownElement()
 {
     reader.readNext();
     while(!reader.atEnd())
@@ -195,7 +196,7 @@ void KbReadXml::skipUnknownElement()
 }
 
 
-bool KbReadXml::writeXml(const QList<QGraphicsItem*> &list, QString fileName)
+bool KbParseXml::writeXml(const QList<QGraphicsItem*> &list, QString fileName)
 {
     QFile file(fileName);
     if(!file.open(QFile::WriteOnly | QFile::Text))
@@ -219,7 +220,7 @@ bool KbReadXml::writeXml(const QList<QGraphicsItem*> &list, QString fileName)
     return true;
 }
 
-void KbReadXml::writeIndexKey(QXmlStreamWriter *xmlWrite, const QList<QGraphicsItem*> &list)
+void KbParseXml::writeIndexKey(QXmlStreamWriter *xmlWrite, const QList<QGraphicsItem*> &list)
 {
     Q_UNUSED(xmlWrite);
     Q_UNUSED(list);
@@ -241,7 +242,7 @@ void KbReadXml::writeIndexKey(QXmlStreamWriter *xmlWrite, const QList<QGraphicsI
 	}*/
 }
 
-void KbReadXml::initView()
+void KbParseXml::initView()
 {
     qDebug("initView");
     if(!m_kbList.isEmpty())
@@ -265,6 +266,10 @@ void KbReadXml::initView()
 		    item->setKeycode(key->keycode());
 		    item->setBackground(key->background());
 		    m_scene->addItem(item);
+		    if(page->pagekey() == key->keycode())
+		    {
+			//			connect(key, SIGNAL(page(int)), m_view , SLOT(changeScenme(int)));
+		    }
 		}
 		m_view->sceneList().append(m_scene);
 	    }

@@ -38,12 +38,12 @@ void KbItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 void KbItem::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     qDebug("mousePressEvent");
-    /*    KbView* view = dynamic_cast<KbView *>(event->widget());
+    /*    KbView *view = dynamic_cast<KbView *>( event->widget());
     if( view != 0)
-	view->setSceneNum(1);
+	qDebug("view = %X ", view);
     else
 	qDebug("error mousepressevent");
-
-	qDebug("mousePressEvent1");*/
+    */
+    qDebug("mousePressEvent1");
     QGraphicsItem::mousePressEvent(event);
 }

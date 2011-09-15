@@ -6,7 +6,7 @@
 class KeyAttribute
 {
 public:
-    KeyAttribute():m_x(0),m_y(0),m_width(0),m_height(0)
+    KeyAttribute():m_x(0),m_y(0),m_width(0),m_height(0),m_keycode(0)
     {}
 
     //set Foundation

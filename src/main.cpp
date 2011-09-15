@@ -1,11 +1,11 @@
 #include <QApplication>
-#include "KbReadXml.h"
+#include "KbParseXml.h"
 
 int main(int argc, char** argv)
 {
     QApplication app(argc,argv);
-
-    KbReadXml my;
+    
+    KbParseXml my;
     my.readFile("./save.xml");
     my.initView();
     return app.exec();
