@@ -26,3 +26,17 @@ void KbItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
     painter->setFont(QFont("Times", 18, QFont::Bold));
     painter->drawText(0,0, m_width, m_height, Qt::AlignCenter, m_text);
 }
+
+
+void KbItem::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    qDebug("mousePressEvent");
+    /*    KbView* view = dynamic_cast<KbView *>(event->widget());
+    if( view != 0)
+	view->setSceneNum(1);
+    else
+	qDebug("error mousepressevent");
+
+	qDebug("mousePressEvent1");*/
+    QGraphicsItem::mousePressEvent(event);
+}

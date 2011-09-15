@@ -3,6 +3,7 @@
 
 #include <QGraphicsItem>
 #include <QtGui>
+#include "KbView.h"
 
 class KbItem : public QGraphicsItem
 {
@@ -12,6 +13,9 @@ public:
 
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0);
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
+public:
+    // set and gei Foundation
     void setWidth(int width = 0)
     {
 	m_width = width;

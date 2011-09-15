@@ -9,6 +9,10 @@
       <key x="150" y="150" width="40" height="20" text="1/2" keycode="" background="" id="" />
     </page>
     <page pagekey="2">
+      <key x="65" y="5" width="40" height="40" text="上" keycode="" background="" id="" />
+      <key x="65" y="125" width="40" height="40" text="下" keycode="" background="" id="" />
+      <key x="5" y="65" width="40" height="40" text="左" keycode="" background="" id="" />
+      <key x="125" y="65" width="40" height="40" text="右" keycode="" background="" id="" />
       <key x="150" y="150" width="40" height="20" text="2/2" keycode="" background="" id="" />
     </page>
   </keyboard>
