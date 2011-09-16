@@ -1,34 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <view>
-  <keyboard id="1" x="0" y="0" width="200" height="200">
+  <keyboard id="1" x="0" y="0" width="250" height="250">
     <page pagekey="1">
       <key x="60" y="0" width="50" height="50" text="上" keycode="10" background="./btn.png" id="" />
       <key x="60" y="120" width="50" height="50" text="下" keycode="10" background="./btn.png" id="" />
-      <key x="0" y="60" width="50" height="50" text="左" keycode="10" background="./left.png" id="" />
+      <key x="0" y="60" width="50" height="50" text="左" keycode="10" background="./btn.png" id="" />
       <key x="120" y="60" width="50" height="50" text="右" keycode="10" background="./btn.png" id="" />
-      <key x="150" y="150" width="40" height="20" text="1/3" keycode="1" background="./btn.png" id="" />
+      <key x="170" y="130" width="40" height="30" text="next" keycode="0" background="./btn.png" id="" />
     </page>
     <page pagekey="2">
-      <key x="65" y="5" width="40" height="40" text="上" keycode="10" background="./btn.png" id="" />
-      <key x="65" y="125" width="40" height="40" text="下" keycode="10" background="./btn.png" id="" />
-      <key x="5" y="65" width="40" height="40" text="左" keycode="10" background="./btn.png" id="" />
-      <key x="125" y="65" width="40" height="40" text="右" keycode="10" background="./btn.png" id="" />
-      <key x="150" y="150" width="40" height="20" text="2/3" keycode="2" background="./btn.png" id="" />
+      <key x="10" y="10" width="50" height="50" text="A" keycode="10" background="./btn.png" id="" />
+      <key x="110" y="10" width="50" height="50" text="B" keycode="10" background="./btn.png" id="" />
+      <key x="10" y="110" width="50" height="50" text="C" keycode="10" background="./btn.png" id="" />
+      <key x="110" y="110" width="50" height="50" text="D" keycode="10" background="./btn.png" id="" />
+      <key x="170" y="130" width="40" height="30" text="next" keycode="0" background="./btn.png" id="" />
+      <key x="170" y="10" width="40" height="30" text="up" keycode="0" background="./btn.png" id="" />
     </page>
-        <page pagekey="3">
-      <key x="65" y="5" width="40" height="40" text="上" keycode="10" background="./btn.png" id="" />
-      <key x="65" y="125" width="40" height="40" text="下" keycode="10" background="./btn.png" id="" />
-      <key x="5" y="65" width="40" height="40" text="左" keycode="10" background="./btn.png" id="" />
-      <key x="125" y="65" width="40" height="40" text="右" keycode="10" background="./btn.png" id="" />
-      <key x="150" y="150" width="40" height="20" text="3/3" keycode="3" background="./btn.png" id="" />
+    <page pagekey="3">
+      <key x="60" y="0" width="50" height="50" text="上" keycode="10" background="./btn.png" id="" />
+      <key x="60" y="120" width="50" height="50" text="下" keycode="10" background="./btn.png" id="" />
+      <key x="0" y="60" width="50" height="50" text="左" keycode="10" background="./btn.png" id="" />
+      <key x="120" y="60" width="50" height="50" text="右" keycode="10" background="./btn.png" id="" />
+      <key x="170" y="10" width="40" height="30" text="up" keycode="0" background="./btn.png" id="" />
     </page>
   </keyboard>
-  <keyboard id="2" x="300" y="0" width="200" height="200">
+  <keyboard id="2" x="300" y="0" width="250" height="250">
     <page pagekey="0">
       <key x="10" y="10" width="50" height="50" text="A" keycode="10" background="./btn.png" id="" />
       <key x="110" y="10" width="50" height="50" text="B" keycode="10" background="./btn.png" id="" />
       <key x="10" y="110" width="50" height="50" text="C" keycode="10" background="./btn.png" id="" />
       <key x="110" y="110" width="50" height="50" text="D" keycode="10" background="./btn.png" id="" />
+      <key x="170" y="130" width="40" height="30" text="next" keycode="0" background="./btn.png" id="" />
+    </page>
+    <page pagekey="1">
+      <key x="10" y="10" width="50" height="50" text="D" keycode="10" background="./btn.png" id="" />
+      <key x="110" y="10" width="50" height="50" text="C" keycode="10" background="./btn.png" id="" />
+      <key x="10" y="110" width="50" height="50" text="B" keycode="10" background="./btn.png" id="" />
+      <key x="110" y="110" width="50" height="50" text="A" keycode="10" background="./btn.png" id="" />
+      <key x="170" y="130" width="40" height="30" text="next" keycode="0" background="./btn.png" id="" />
+      <key x="170" y="10" width="40" height="30" text="up" keycode="0" background="./btn.png" id="" />
+    </page>
+    <page>
+      <key x="60" y="0" width="50" height="50" text="上" keycode="10" background="./btn.png" id="" />
+      <key x="60" y="120" width="50" height="50" text="下" keycode="10" background="./btn.png" id="" />
+      <key x="0" y="60" width="50" height="50" text="左" keycode="10" background="./btn.png" id="" />
+      <key x="120" y="60" width="50" height="50" text="右" keycode="10" background="./btn.png" id="" />
+      <key x="170" y="10" width="40" height="30" text="up" keycode="0" background="./btn.png" id="" />
     </page>
   </keyboard>
 </view>

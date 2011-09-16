@@ -18,8 +18,8 @@ public:
     bool readFile(QString fileName);
 
     //write ItemData in xml
-    bool writeXml(const QList<QGraphicsItem*> &list, QString fileName="save.xml");
-    void writeIndexKey(QXmlStreamWriter *xmlWrite, const QList<QGraphicsItem*> &list);
+    //    bool writeXml(const QList<QGraphicsItem*> &list, QString fileName="save.xml");
+    //    void writeIndexKey(QXmlStreamWriter *xmlWrite, const QList<QGraphicsItem*> &list);
     void initView();
 private:
     void readViewElement();
@@ -30,10 +30,7 @@ private:
 
     QXmlStreamReader        reader;
     QList<KbAttribute *>    m_kbList;
-    //    QList<PageAttribute *>  m_pageList;
-    //    QList<KeyAttribute *>   m_keyList;
-    //    QList<QGraphicsScene *> m_sceneList;
-    KbView                 *m_view;
+    KbView                  *m_view;
     QGraphicsScene          *m_scene;
     KbAttribute             *m_kb;
     PageAttribute           *m_page;

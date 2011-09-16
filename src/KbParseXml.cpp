@@ -196,7 +196,7 @@ void KbParseXml::skipUnknownElement()
 }
 
 
-bool KbParseXml::writeXml(const QList<QGraphicsItem*> &list, QString fileName)
+/*bool KbParseXml::writeXml(const QList<QGraphicsItem*> &list, QString fileName)
 {
     QFile file(fileName);
     if(!file.open(QFile::WriteOnly | QFile::Text))
@@ -224,7 +224,7 @@ void KbParseXml::writeIndexKey(QXmlStreamWriter *xmlWrite, const QList<QGraphics
 {
     Q_UNUSED(xmlWrite);
     Q_UNUSED(list);
-    /*    foreach(QGraphicsItem* item , list)
+    foreach(QGraphicsItem* item , list)
     {
 	myItem = dynamic_cast<MyItem *>(item);
 	if(myItem != 0)
@@ -239,8 +239,8 @@ void KbParseXml::writeIndexKey(QXmlStreamWriter *xmlWrite, const QList<QGraphics
 	    xmlWrite->writeAttribute("background", myItem->background());
 	    xmlWrite->writeEndElement();
 	}
+	}
 	}*/
-}
 
 void KbParseXml::initView()
 {
@@ -254,7 +254,6 @@ void KbParseXml::initView()
 	    qDebug("x=%d, y=%d,w=%d,h=%d",kb->x(), kb->y(), kb->width(), kb->height());
 	    foreach(PageAttribute *page, kb->pageList())
 	    {
-		qDebug("id = %d", page->pagekey());
 		m_scene = new QGraphicsScene;
 		foreach(KeyAttribute *key, page->keyList())
 		{
@@ -266,10 +265,6 @@ void KbParseXml::initView()
 		    item->setKeycode(key->keycode());
 		    item->setBackground(key->background());
 		    m_scene->addItem(item);
-		    if(page->pagekey() == key->keycode())
-		    {
-			//			connect(key, SIGNAL(page(int)), m_view , SLOT(changeScenme(int)));
-		    }
 		}
 		m_view->sceneList().append(m_scene);
 	    }

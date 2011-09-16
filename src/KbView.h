@@ -14,7 +14,6 @@ public:
     
     void setSceneNum(int i)
     {
-	qDebug("i = %d", i);
 	if(m_sceneList.count() > 1)
 	    this->setScene(m_sceneList[i]);
     }
