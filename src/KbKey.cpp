@@ -1,23 +1,23 @@
-#include "KbItem.h"
+#include "KbKey.h"
 
 
-KbItem::KbItem():QGraphicsItem(), m_pixmap(0)
+KbKey::KbKey():QGraphicsItem(), m_pixmap(0)
 {
     setAcceptedMouseButtons(Qt::LeftButton);
 }
 
-KbItem::~KbItem()
+KbKey::~KbKey()
 {
     if(m_pixmap)
 	delete m_pixmap;
 }
 
-QRectF KbItem::boundingRect() const
+QRectF KbKey::boundingRect() const
 {
     return QRectF(0,0,m_width, m_height);
 }
 
-void KbItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+void KbKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     Q_UNUSED(option);
     Q_UNUSED(widget);
@@ -35,13 +35,13 @@ void KbItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 }
 
 
-void KbItem::mousePressEvent(QGraphicsSceneMouseEvent *event)
+void KbKey::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     Q_UNUSED(event);
     //    QGraphicsItem::mousePressEvent(event);
 }
 
-void KbItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
+void KbKey::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseReleaseEvent(event);
 }

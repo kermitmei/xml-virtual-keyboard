@@ -147,15 +147,15 @@ void KbParseXml::readPageElement()
 
 void KbParseXml::readKeyElement()
 {
-    m_item = new KbItem;
-    m_item->setX(reader.attributes().value("x").toString().toInt());
-    m_item->setY(reader.attributes().value("y").toString().toInt());
-    m_item->setWidth(reader.attributes().value("width").toString().toInt());
-    m_item->setHeight(reader.attributes().value("height").toString().toInt());
-    m_item->setText(reader.attributes().value("text").toString());
-    m_item->setKeycode(reader.attributes().value("keycode").toString().toInt());
-    m_item->setBackground(reader.attributes().value("background").toString());
-    m_page->addItem(m_item);
+    m_key = new KbKey;
+    m_key->setX(reader.attributes().value("x").toString().toInt());
+    m_key->setY(reader.attributes().value("y").toString().toInt());
+    m_key->setWidth(reader.attributes().value("width").toString().toInt());
+    m_key->setHeight(reader.attributes().value("height").toString().toInt());
+    m_key->setText(reader.attributes().value("text").toString());
+    m_key->setKeycode(reader.attributes().value("keycode").toString().toInt());
+    m_key->setBackground(reader.attributes().value("background").toString());
+    m_page->addItem(m_key);
     reader.readNext();
     while(!reader.atEnd())
     {

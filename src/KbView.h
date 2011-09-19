@@ -4,7 +4,7 @@
 
 #include <QGraphicsView>
 #include "KbPage.h"
-#include "KbItem.h"
+#include "KbKey.h"
 #include <QtGui>
 #include <QTimer>
 

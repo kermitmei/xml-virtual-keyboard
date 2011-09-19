@@ -4,7 +4,7 @@
 #include <QtXml>
 #include <QtGui>
 
-#include "KbItem.h"
+#include "KbKey.h"
 #include "KbView.h"
 #include "KbPage.h"
 
@@ -23,6 +23,6 @@ private:
     QXmlStreamReader        reader;
     KbView                  *m_view;
     KbPage                  *m_page;
-    KbItem                  *m_item;
+    KbKey                  *m_key;
 };
 #endif//_KBPARSEXML_H_

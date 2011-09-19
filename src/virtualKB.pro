@@ -13,12 +13,12 @@ CONFIG += debug
 
 # Input
 HEADERS += KbParseXml.h                \
-           KbItem.h                    \
+           KbKey.h                    \
            KbView.h                    \
            KbPage.h                    \
            
 SOURCES += main.cpp           \
            KbParseXml.cpp     \
-           KbItem.cpp         \
+           KbKey.cpp         \
            KbView.cpp         \
            KbPage.cpp         \

@@ -1,16 +1,16 @@
-#ifndef _KBITEM_H_
-#define _KBITEM_H_
+#ifndef _KBKEY_H_
+#define _KBKEY_H_
 
 #include <QGraphicsItem>
 #include <QtGui>
 
 #include "KbView.h"
 
-class KbItem : public QGraphicsItem
+class KbKey : public QGraphicsItem
 {
 public:
-    KbItem();
-    ~KbItem();
+    KbKey();
+    ~KbKey();
 
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0);
@@ -73,4 +73,4 @@ private:
     QString m_background;
     QPixmap *m_pixmap;
 };
-#endif//_KBITEM_H_
+#endif//_KBKEY_H_
