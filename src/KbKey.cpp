@@ -1,7 +1,7 @@
 #include "KbKey.h"
 
 
-KbKey::KbKey():QGraphicsItem(), m_pixmap(0)
+KbKey::KbKey():QGraphicsItem(), m_pixmap(0), m_press(false)
 {
     setAcceptedMouseButtons(Qt::LeftButton);
 }
@@ -21,15 +21,24 @@ void KbKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
 {
     Q_UNUSED(option);
     Q_UNUSED(widget);
+    painter->setPen(Qt::NoPen);
     if(m_pixmap != 0)
     {
-	painter->drawPixmap(0,0, m_width, m_height, *m_pixmap);
+	if(m_press == true)
+	{
+	    painter->setBrush(QBrush(QColor(255,246,143)));
+	    painter->drawRect(0,0,m_width, m_height);
+	}
+	else
+	    painter->drawPixmap(0,0, m_width, m_height, *m_pixmap);
     }
     else
     {
 	painter->setBrush(QBrush(QColor(85,85,85)));
     }
-    //    painter->drawRect(0,0,m_width, m_height);
+    painter->setBrush(QBrush(QColor(255,246,143)));
+    painter->setPen(Qt::black);
+    //painter->drawRect(0,0,m_width, m_height);    
     painter->setFont(QFont("Times", 18, QFont::Bold));
     painter->drawText(0,0, m_width, m_height, Qt::AlignCenter, m_text);
 }
@@ -38,10 +47,13 @@ void KbKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
 void KbKey::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     Q_UNUSED(event);
-    //    QGraphicsItem::mousePressEvent(event);
+    m_press = true;
+    update();
 }
 
 void KbKey::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 {
+    m_press = false;
+    update();
     QGraphicsItem::mouseReleaseEvent(event);
 }

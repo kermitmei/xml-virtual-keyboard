@@ -72,5 +72,6 @@ private:
     QString m_text;
     QString m_background;
     QPixmap *m_pixmap;
+    bool    m_press;
 };
 #endif//_KBKEY_H_
