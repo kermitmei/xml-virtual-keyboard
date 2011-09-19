@@ -1,13 +1,25 @@
 #include "KbView.h"
-#include "KbItem.h"
-
 
 KbView::KbView(QWidget *parent ) : QGraphicsView(parent),m_count(0), m_moveView(false), m_oldGlobalPos(0,0)
 {
-    setWindowFlags(Qt::FramelessWindowHint);
+    //    setWindowFlags(Qt::FramelessWindowHint);
+    setAttribute(Qt::WA_DeleteOnClose);
     m_timer = new QTimer(this);
     connect(m_timer, SIGNAL(timeout()),
 	    this, SLOT(moveView()));
+}
+
+KbView::~KbView()
+{
+    foreach(KbPage *page, m_pageList)
+	foreach(QGraphicsItem *item , page->items())
+    {
+	KbItem *kbItem = dynamic_cast<KbItem *>(item);
+	if(kbItem != 0)
+	{
+	    delete kbItem;
+	}
+    }
 }
 
 void KbView::mousePressEvent(QMouseEvent *event)
@@ -15,15 +27,15 @@ void KbView::mousePressEvent(QMouseEvent *event)
     m_timer->start(1000);
     m_oldGlobalPos = event->globalPos();
     KbItem *item = dynamic_cast<KbItem *>(itemAt(event->pos()));
-    if( item != 0 && item->keycode() <= 0)
+    if( item != 0 && item->keycode() < 0)
     {
-	if(item->text() == "next")
+	if(item->keycode() == -1)
 	{
 	    m_count++;
 	    setSceneNum(m_count);
 	    
 	}
-	else if(item->text() == "up")
+	else if(item->keycode() == -2)
 	{
 	    m_count --;
 	    setSceneNum(m_count);

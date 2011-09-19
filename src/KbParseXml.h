@@ -3,24 +3,16 @@
 
 #include <QtXml>
 #include <QtGui>
-#include <QList>
 
-#include "./data/KbAttribute.h"
-#include "./data/PageAttribute.h"
-#include "./data/KeyAttribute.h"
 #include "KbItem.h"
 #include "KbView.h"
+#include "KbPage.h"
 
 class KbParseXml
 {
 public:
     KbParseXml();;
     bool readFile(QString fileName);
-
-    //write ItemData in xml
-    //    bool writeXml(const QList<QGraphicsItem*> &list, QString fileName="save.xml");
-    //    void writeIndexKey(QXmlStreamWriter *xmlWrite, const QList<QGraphicsItem*> &list);
-    void initView();
 private:
     void readViewElement();
     void readKeyboardElement();
@@ -29,11 +21,8 @@ private:
     void skipUnknownElement();
 
     QXmlStreamReader        reader;
-    QList<KbAttribute *>    m_kbList;
     KbView                  *m_view;
-    QGraphicsScene          *m_scene;
-    KbAttribute             *m_kb;
-    PageAttribute           *m_page;
-    KeyAttribute            *m_key;
+    KbPage                  *m_page;
+    KbItem                  *m_item;
 };
 #endif//_KBPARSEXML_H_

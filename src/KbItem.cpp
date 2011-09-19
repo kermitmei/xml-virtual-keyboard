@@ -37,7 +37,8 @@ void KbItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 
 void KbItem::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    QGraphicsItem::mousePressEvent(event);
+    Q_UNUSED(event);
+    //    QGraphicsItem::mousePressEvent(event);
 }
 
 void KbItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)

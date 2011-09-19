@@ -3,7 +3,7 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = 
+TARGET = test
 DEPENDPATH += .
 INCLUDEPATH += .
 
@@ -12,14 +12,13 @@ QT += xml
 CONFIG += debug
 
 # Input
-HEADERS += KbParseXml.h                 \
-           ./data/KbAttribute.h        \
-           ./data/PageAttribute.h      \
-           ./data/KeyAttribute.h       \
+HEADERS += KbParseXml.h                \
            KbItem.h                    \
            KbView.h                    \
+           KbPage.h                    \
            
 SOURCES += main.cpp           \
-           KbParseXml.cpp      \
+           KbParseXml.cpp     \
            KbItem.cpp         \
            KbView.cpp         \
+           KbPage.cpp         \

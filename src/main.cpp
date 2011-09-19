@@ -7,6 +7,5 @@ int main(int argc, char** argv)
     
     KbParseXml my;
     my.readFile("./save.xml");
-    my.initView();
     return app.exec();
 }
