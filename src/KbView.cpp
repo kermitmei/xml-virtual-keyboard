@@ -5,6 +5,7 @@ KbView::KbView(QWidget *parent ) : QGraphicsView(parent),m_count(0), m_moveView(
     setWindowFlags(Qt::FramelessWindowHint);
     setAttribute(Qt::WA_DeleteOnClose);
     m_timer = new QTimer(this);
+    setStyleSheet("border-image: url(./pics/shabu.png);");
     connect(m_timer, SIGNAL(timeout()),
 	    this, SLOT(moveView()));
 }

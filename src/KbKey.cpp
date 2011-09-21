@@ -1,7 +1,9 @@
 #include "KbKey.h"
 
 
-KbKey::KbKey():QGraphicsItem(), m_pixmap(0), m_press(false)
+KbKey::KbKey()
+ : m_pixmap(0), m_pixmapPressed(0),
+   m_press(false)
 {
     setAcceptedMouseButtons(Qt::LeftButton);
 }
@@ -26,8 +28,9 @@ void KbKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     {
 	if(m_press == true)
 	{
-	    painter->setBrush(QBrush(QColor(255,246,143)));
-	    painter->drawRect(0,0,m_width, m_height);
+	    //painter->setBrush(QBrush(QColor(255,246,143)));
+	    //painter->drawRect(0,0,m_width, m_height);
+	    painter->drawPixmap(0,0, m_width, m_height, *m_pixmapPressed);
 	}
 	else
 	    painter->drawPixmap(0,0, m_width, m_height, *m_pixmap);

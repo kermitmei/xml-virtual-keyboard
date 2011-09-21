@@ -38,11 +38,19 @@ public:
     {
 	m_background = background;
 	m_pixmap = new QPixmap(m_background);
+	background.replace(".png", "_pressed.png");
+	m_pixmapPressed = new QPixmap(background);
 	if(m_pixmap->isNull())
 	{
 	    qDebug("m_pixmap is null");
 	    delete m_pixmap;
 	    m_pixmap = 0;
+	}
+	if(m_pixmapPressed->isNull())
+	{
+	    qDebug("m_pixmapPressed is null");
+	    delete m_pixmapPressed;
+	    m_pixmapPressed = 0;
 	}
     }
     int width() const
@@ -72,6 +80,7 @@ private:
     QString m_text;
     QString m_background;
     QPixmap *m_pixmap;
+    QPixmap *m_pixmapPressed;
     bool    m_press;
 };
 #endif//_KBKEY_H_
