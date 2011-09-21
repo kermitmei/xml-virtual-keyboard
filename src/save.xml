@@ -25,7 +25,7 @@
       <key x="373" y="102" width="50" height="48" text="H" background="./pics/btn.png" keycode="10" />
       <key x="320" y="102" width="50" height="48" text="G" background="./pics/btn.png" keycode="10" />
       <key x="426" y="102" width="50" height="48" text="J" background="./pics/btn.png" keycode="10" />
-      <key x="2" y="102" width="101" height="48" text="Tab" background="./pics/btn.png" keycode="10" />
+      <key x="2" y="102" width="101" height="48" text="Tab" background="./pics/wideKey.png" keycode="10" />
       <key x="108" y="102" width="50" height="48" text="A" background="./pics/btn.png" keycode="10" />
       <key x="161" y="102" width="50" height="48" text="S" background="./pics/btn.png" keycode="10" />
       <key x="478" y="102" width="50" height="48" text="K" background="./pics/btn.png" keycode="10" />
@@ -39,13 +39,13 @@
       <key x="426" y="152" width="50" height="48" text="M" background="./pics/btn.png" keycode="10" />
       <key x="214" y="152" width="50" height="48" text="C" background="./pics/btn.png" keycode="10" />
       <key x="267" y="152" width="50" height="48" text="V" background="./pics/btn.png" keycode="10" />
-      <key x="2" y="152" width="101" height="48" text="Shift" background="./pics/btn.png" keycode="10" />
-      <key x="480" y="202" width="101" height="48" text="Enter" background="./pics/btn.png" keycode="10" />
-      <key x="112" y="202" width="101" height="48" text="Ctrl" background="./pics/btn.png" keycode="10" />
-      <key x="217" y="202" width="101" height="48" text="Alt" background="./pics/btn.png" keycode="10" />
-      <key x="322" y="202" width="151" height="48" text="Space" background="./pics/btn.png" keycode="10" />
-      <key x="480" y="152" width="101" height="48" text="Backspace" background="./pics/btn.png" keycode="10" />
-      <key x="2" y="202" width="101" height="48" text="ChangePage" background="./pics/btn.png" keycode="10" />
+      <key x="2" y="152" width="101" height="48" text="Shift" background="./pics/wideKey.png" keycode="10" />
+      <key x="480" y="202" width="101" height="48" text="Enter" background="./pics/wideKey.png" keycode="10" />
+      <key x="112" y="202" width="101" height="48" text="Ctrl" background="./pics/wideKey.png" keycode="10" />
+      <key x="217" y="202" width="101" height="48" text="Alt" background="./pics/wideKey.png" keycode="10" />
+      <key x="322" y="202" width="151" height="48" text="Space" background="./pics/wideKey.png" keycode="10" />
+      <key x="480" y="152" width="101" height="48" text="" background="./pics/backspace.png" keycode="10" />
+      <key x="2" y="202" width="101" height="48" text="ChangePage" background="./pics/wideKey.png" keycode="10" />
       <key x="2" y="2" width="50" height="48" text="Esc" background="./pics/btn.png" keycode="10" />
       <key x="2" y="51" width="50" height="48" text="Home" background="./pics/btn.png" keycode="10" />
     </page>
