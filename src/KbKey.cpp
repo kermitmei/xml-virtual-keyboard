@@ -42,7 +42,7 @@ void KbKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     painter->setBrush(QBrush(QColor(255,246,143)));
     painter->setPen(Qt::black);
     //painter->drawRect(0,0,m_width, m_height);    
-    painter->setFont(QFont("Times", 18, QFont::Bold));
+    painter->setFont(QFont("Times", 18, QFont::Normal));
     painter->drawText(0,0, m_width, m_height, Qt::AlignCenter, m_text);
 }
 
