@@ -50,6 +50,55 @@
       <key x="5" y="54" width="50" height="48" text="Home" background="./pics/btn.png" keycode="10" />
     </page>
     <page>
+      <key x="5" y="5" width="50" height="48" text="F1" background="./pics/btn.png" keycode="10" />
+      <key x="58" y="5" width="50" height="48" text="F2" background="./pics/btn.png" keycode="10" />
+      <key x="110" y="5" width="50" height="48" text="F3" background="./pics/btn.png" keycode="10" />
+      <key x="217" y="5" width="50" height="48" text="F5" background="./pics/btn.png" keycode="10" />
+      <key x="164" y="5" width="50" height="48" text="F4" background="./pics/btn.png" keycode="10" />
+      <key x="270" y="5" width="50" height="48" text="F6" background="./pics/btn.png" keycode="10" />
+      <key x="377" y="5" width="50" height="48" text="F8" background="./pics/btn.png" keycode="10" />
+      <key x="323" y="5" width="50" height="48" text="F7" background="./pics/btn.png" keycode="10" />
+      <key x="430" y="5" width="50" height="48" text="F9" background="./pics/btn.png" keycode="10" />
+      <key x="482" y="5" width="50" height="48" text="F10" background="./pics/btn.png" keycode="10" />
+      <key x="322" y="55" width="50" height="48" text="y" background="./pics/btn.png" keycode="10" />
+      <key x="375" y="55" width="50" height="48" text="u" background="./pics/btn.png" keycode="10" />
+      <key x="110" y="55" width="50" height="48" text="w" background="./pics/btn.png" keycode="10" />
+      <key x="57" y="55" width="50" height="48" text="q" background="./pics/btn.png" keycode="10" />
+      <key x="535" y="55" width="50" height="48" text="p" background="./pics/btn.png" keycode="10" />
+      <key x="429" y="55" width="50" height="48" text="i" background="./pics/btn.png" keycode="10" />
+      <key x="163" y="55" width="50" height="48" text="e" background="./pics/btn.png" keycode="10" />
+      <key x="216" y="55" width="50" height="48" text="r" background="./pics/btn.png" keycode="10" />
+      <key x="269" y="55" width="50" height="48" text="t" background="./pics/btn.png" keycode="10" />
+      <key x="482" y="55" width="50" height="48" text="o" background="./pics/btn.png" keycode="10" />
+      <key x="376" y="105" width="50" height="48" text="h" background="./pics/btn.png" keycode="10" />
+      <key x="323" y="105" width="50" height="48" text="g" background="./pics/btn.png" keycode="10" />
+      <key x="429" y="105" width="50" height="48" text="j" background="./pics/btn.png" keycode="10" />
+      <key x="5" y="105" width="101" height="48" text="Tab" background="./pics/wideKey.png" keycode="10" />
+      <key x="110" y="105" width="50" height="48" text="a" background="./pics/btn.png" keycode="10" />
+      <key x="163" y="105" width="50" height="48" text="s" background="./pics/btn.png" keycode="10" />
+      <key x="482" y="105" width="50" height="48" text="k" background="./pics/btn.png" keycode="10" />
+      <key x="216" y="105" width="50" height="48" text="d" background="./pics/btn.png" keycode="10" />
+      <key x="270" y="105" width="50" height="48" text="f" background="./pics/btn.png" keycode="10" />
+      <key x="163" y="155" width="50" height="48" text="x" background="./pics/btn.png" keycode="10" />
+      <key x="535" y="105" width="50" height="48" text="l" background="./pics/btn.png" keycode="10" />
+      <key x="110" y="155" width="50" height="48" text="z" background="./pics/btn.png" keycode="10" />
+      <key x="325" y="155" width="50" height="48" text="b" background="./pics/btn.png" keycode="10" />
+      <key x="5" y="155" width="101" height="48" text="Shift" background="./pics/wideKey.png" keycode="10" />
+      <key x="482" y="205" width="102" height="48" text="Enter" background="./pics/wideKey.png" keycode="10" />
+      <key x="111" y="205" width="101" height="48" text="Ctrl" background="./pics/wideKey.png" keycode="10" />
+      <key x="216" y="205" width="104" height="48" text="Alt" background="./pics/wideKey.png" keycode="10" />
+      <key x="325" y="205" width="154" height="48" text="Space" background="./pics/wideKey.png" keycode="10" />
+      <key x="482" y="155" width="102" height="48" text="" background="./pics/backspace.png" keycode="10" />
+      <key x="5" y="205" width="101" height="48" text="ChangePage" background="./pics/wideKey.png" keycode="-2" />
+      <key x="535" y="5" width="50" height="48" text="F11" background="./pics/btn.png" keycode="10" />
+      <key x="5" y="55" width="50" height="48" text="F12" background="./pics/btn.png" keycode="10" />
+      <key x="216" y="155" width="50" height="48" text="c" background="./pics/btn.png" keycode="10" />
+      <key x="270" y="155" width="50" height="48" text="v" background="./pics/btn.png" keycode="10" />
+      <key x="429" y="155" width="50" height="48" text="m" background="./pics/btn.png" keycode="10" />
+      <key x="377" y="155" width="50" height="48" text="n" background="./pics/btn.png" keycode="10" />
+    </page>
+
+    <page>
       <key x="57" y="5" width="50" height="48" text="!" background="./pics/btn.png" keycode="10" />
       <key x="110" y="5" width="50" height="48" text="@" background="./pics/btn.png" keycode="10" />
       <key x="163" y="5" width="50" height="48" text="#" background="./pics/btn.png" keycode="10" />
@@ -89,15 +138,13 @@
       <key x="216" y="205" width="104" height="48" text="Alt"   background="./pics/wideKey.png" keycode="10" />
       <key x="325" y="205" width="154" height="48" text="Space" background="./pics/wideKey.png" keycode="10" />
       <key x="482" y="155" width="102" height="48" text="" background="./pics/backspace.png" keycode="10" />
-      <key x="5"   y="205" width="101" height="48" text="ChangePage" background="./pics/wideKey.png" keycode="-2" />
+      <key x="5"   y="205" width="101" height="48" text="ChangePage" background="./pics/wideKey.png" keycode="-3" />
       <key x="5"   y="5"   width="50" height="48" text="~" background="./pics/btn.png" keycode="10" />
       <key x="5"   y="55"  width="50" height="48" text="`" background="./pics/btn.png" keycode="10" />
       <key x="216" y="155" width="50" height="48" text="*" background="./pics/btn.png" keycode="10" />
       <key x="270" y="155" width="50" height="48" text="/" background="./pics/btn.png" keycode="10" />
       <key x="429" y="155" width="50" height="48" text=")" background="./pics/btn.png" keycode="10" />
       <key x="377" y="155" width="50" height="48" text="(" background="./pics/btn.png" keycode="10" />
-    </page>
-    <page>
     </page>
   </keyboard>
 </view>
