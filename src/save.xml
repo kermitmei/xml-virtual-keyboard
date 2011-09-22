@@ -41,8 +41,8 @@
       <key x="267" y="152" width="50" height="48" text="V" background="./pics/btn.png" keycode="10" />
       <key x="2" y="152" width="101" height="48" text="Shift" background="./pics/wideKey.png" keycode="10" />
       <key x="480" y="202" width="101" height="48" text="Enter" background="./pics/wideKey.png" keycode="10" />
-      <key x="112" y="202" width="101" height="48" text="Ctrl" background="./pics/wideKey.png" keycode="10" />
-      <key x="217" y="202" width="101" height="48" text="Alt" background="./pics/wideKey.png" keycode="10" />
+      <key x="108" y="202" width="101" height="48" text="Ctrl" background="./pics/wideKey.png" keycode="10" />
+      <key x="214" y="202" width="101" height="48" text="Alt" background="./pics/wideKey.png" keycode="10" />
       <key x="322" y="202" width="151" height="48" text="Space" background="./pics/wideKey.png" keycode="10" />
       <key x="480" y="152" width="101" height="48" text="" background="./pics/backspace.png" keycode="10" />
       <key x="2" y="202" width="101" height="48" text="ChangePage" background="./pics/wideKey.png" keycode="10" />
