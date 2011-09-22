@@ -208,6 +208,7 @@ void send_a_button()
 
 void send_a_key(__u16 keyCode)
 {
+    keyCode = 0;
     return ;
 }
 
