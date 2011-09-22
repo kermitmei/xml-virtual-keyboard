@@ -12,7 +12,7 @@ class MyKeyboard(QWidget, Ui_MyKeyboard):
 
     def printBtn(self):
         for btn in self.children():
-            if btn.inherits("QWidget"):
+            if btn.inherits("QAbstractButton"):
                 attr = QString('<key x="%1" y="%2" width="%3" height="%4" text="%5" background="./pics/btn.png" keycode="10" />').arg(btn.x()).arg(btn.y()).arg(btn.width()).arg(btn.height()).arg(btn.text())
                 print attr
                 
