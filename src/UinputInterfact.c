@@ -5,6 +5,8 @@ int uinp_fd = -1;
 struct uinput_user_dev uinp;  // uInput device structure
 struct input_event event;     // Input device structure
 
+#ifdef _X86_UINPUT_
+
 /* Setup the uinput device */
 int setup_uinput_device()
 {
@@ -163,7 +165,7 @@ void send_a_key(__u16 keyCode)
 /* This function will open the uInput device. Please make
    sure that you have inserted the uinput.ko into kernel. */
 
-#if 0
+#  ifdef 0
 int main(void)
 {
     // Return an error if device not found.
@@ -185,4 +187,29 @@ int main(void)
     close(uinp_fd);
     return 0;
 }
-#endif //#ifdef 0
+#  endif //#ifdef 0
+
+#else  //No _X86_UINPUT_
+
+int setup_uinput_device()
+{
+    return 0;
+}
+
+void send_click_events()
+{
+    return ;
+}
+
+void send_a_button()
+{
+    return ;
+}
+
+void send_a_key(__u16 keyCode)
+{
+    return ;
+}
+
+
+#endif //_X86_UINPUT_

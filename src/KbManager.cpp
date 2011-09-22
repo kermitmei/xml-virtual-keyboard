@@ -4,13 +4,13 @@ KbManager *KbManager::m_kbManager(0);
 
 KbManager::KbManager()
 {
-#ifndef X86_LINUX
+#ifndef _X86_UINPUT_
     if(setup_uinput_device() < 0)
     {
 	qDebug("Unable to find uinput device | usr root ");
 	_exit(22);
     }
-#endif //X86_LINUX
+#endif //_X86_UINPUT_
     m_kbManager = this;
 }
 
