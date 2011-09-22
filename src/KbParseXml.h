@@ -23,6 +23,6 @@ private:
     QXmlStreamReader        reader;
     KbView                  *m_view;
     KbPage                  *m_page;
-    KbKey                  *m_key;
+    KbKey                   *m_key;
 };
 #endif//_KBPARSEXML_H_

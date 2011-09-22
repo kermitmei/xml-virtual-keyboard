@@ -10,8 +10,8 @@ KbKey::KbKey()
 
 KbKey::~KbKey()
 {
-    if(m_pixmap)
-	delete m_pixmap;
+    //    if(m_pixmap)
+    //	delete m_pixmap;
 }
 
 QRectF KbKey::boundingRect() const
@@ -45,7 +45,6 @@ void KbKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     painter->setFont(QFont("Times", 14, QFont::Normal));
     painter->drawText(0,0, m_width, m_height, Qt::AlignCenter, m_text);
 }
-
 
 void KbKey::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {

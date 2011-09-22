@@ -34,6 +34,39 @@ PixmapBuf::~PixmapBuf()
     }
 }
 
+const QPixmap *PixmapBuf::getPixmap(const QString &localUrl)
+{
+    Node *rest = findNode(localUrl);
+
+    if(rest) {
+	moveToFirst(rest);
+	return rest->m_pixmapInfo->pixmap();
+    }
+
+    //The rest doesn't exist.
+    QFileInfo fileInfo(localUrl);
+    if(!fileInfo.exists()) {
+	qDebug("File (%s) Not be found!", qPrintable(localUrl));
+	return 0;
+    }
+
+    //Create pixmap first
+    QPixmap *pixmap = new QPixmap(localUrl);
+    if(pixmap->isNull()) {
+	delete pixmap;
+	return 0;
+    }
+
+    //create the PixmapInfo and then Node object.
+    PixmapInfo *pixmapInfo = 
+	new PixmapInfo(localUrl,fileInfo.lastModified(),pixmap);
+    rest = new Node(pixmapInfo);
+
+    //New node should be move to the first.
+    push_front(rest);
+    return rest->m_pixmapInfo->pixmap();
+}
+
 const PixmapInfo *PixmapBuf::getPixmapInfo(const QString &localUrl)
 {
     Node *rest = findNode(localUrl);

@@ -63,7 +63,9 @@ public:
     { /* Do Nothing Here! */ }
     ~PixmapBuf();
 
-    const PixmapInfo *getPixmapInfo(const QString &localUrl);
+    const QPixmap     *getPixmap(const QString &localUrl);
+    const PixmapInfo  *getPixmapInfo(const QString &localUrl);
+
 
     unsigned int sizeOfBytes() const
     { return m_sizeOfBytes; }
@@ -75,7 +77,7 @@ public:
 protected:
     Node *findNode(const QString &localUrl);
     void  moveToFirst(Node *node);
-    void push_front(Node *node);
+    void  push_front(Node *node);
 
     //Delete a Node, and the Node must be in the list.
     void deleteNode(Node *node);
