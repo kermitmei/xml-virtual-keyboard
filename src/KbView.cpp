@@ -3,6 +3,7 @@
 KbView::KbView(QWidget *parent ) : QGraphicsView(parent),m_count(0), m_moveView(false), m_oldGlobalPos(0,0)
 {
     setWindowFlags(Qt::FramelessWindowHint);
+    setWindowFlags(Qt::ToolTip);
     setAttribute(Qt::WA_DeleteOnClose);
     m_timer = new QTimer(this);
     setStyleSheet("border-image: url(./pics/shabu.png);");
@@ -36,13 +37,13 @@ void KbView::mousePressEvent(QMouseEvent *event)
 	{
 	    m_count++;
 	    setSceneNum(m_count);
-	    
 	}
 	else if(key->keycode() == -2)
 	{
 	    m_count --;
 	    setSceneNum(m_count);
 	}
+	return ;
     }
     QGraphicsView::mousePressEvent(event);
 }

@@ -1,4 +1,5 @@
 #include "KbParseXml.h"
+#include "KbManager.h"
 #include <QVariant>
 
 KbParseXml::KbParseXml()
@@ -6,7 +7,7 @@ KbParseXml::KbParseXml()
 
 }
 
-bool KbParseXml::readFile(QString fileName)
+bool KbParseXml::readFile(const QString &fileName)
 {
     QFile file(fileName);
 
@@ -111,6 +112,7 @@ void KbParseXml::readKeyboardElement()
 	}
     }
     m_view->setScene(m_view->pageList()[0]);
+    g_KbManager->kbViewList().append(m_view);
     m_view->show();
 }
 

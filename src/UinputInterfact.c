@@ -129,6 +129,9 @@ void send_a_button()
 void send_a_key(__u16 keyCode)
 {
     // Report BUTTON CLICK - PRESS event
+#ifndef X86_LINUX
+    keyCode = keyCode - 8;
+#endif //X86_LINUX
     memset(&event, 0, sizeof(event));
     gettimeofday(&event.time, NULL);
     event.type = EV_KEY;

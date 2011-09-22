@@ -1,8 +1,17 @@
 #ifndef _KBMANAGER_H_
 #define _KBMANAGER_H_
 
-#define g_KbManager KbManager::instance()
+#include "KbParseXml.h"
+#include "PixmapBuf.h"
+#include "KbKey.h"
 
+#ifndef X86_LINUX
+extern "C"{
+#include "UinputInterfact.h"
+}
+#endif
+
+#define g_KbManager KbManager::instance()
 class KbManager 
 {
 public:
@@ -10,12 +19,21 @@ public:
     ~KbManager();
 
     bool loadXmlFile(const QString &fileName);
-
-    KbManager *instance();
-
+    
+    static KbManager *instance();
+    QList<KbView *>& kbViewList()
+    {
+	return m_kbViewList;
+    }
+    const QPixmap* getPixmap(const QString &localUrl)
+    {
+	return m_pixmapBuf.getPixmap(localUrl);
+    }
 protected:
     QList<KbView *>  m_kbViewList;
     PixmapBuf        m_pixmapBuf;
+    KbParseXml       m_kbParseXml;
+    static KbManager *m_kbManager;
 };
 
 

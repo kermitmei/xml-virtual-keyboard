@@ -6,6 +6,7 @@
 
 #include "KbView.h"
 
+
 class KbKey : public QGraphicsItem
 {
 public:
@@ -34,10 +35,10 @@ public:
     {
 	m_text = text;
     }
-    void setBackground(QString background = NULL)
-    {
+    void setBackground(QString background = NULL);
+    /*    {
 	m_background = background;
-	m_pixmap = new QPixmap(m_background);
+	//	m_pixmap = const_cast<QPixmap *>(g_KbManager->getPixmap(background));
 	background.replace(".png", "_pressed.png");
 	m_pixmapPressed = new QPixmap(background);
 	if(m_pixmap->isNull())
@@ -52,7 +53,7 @@ public:
 	    delete m_pixmapPressed;
 	    m_pixmapPressed = 0;
 	}
-    }
+	}*/
     int width() const
     {
 	return m_width;

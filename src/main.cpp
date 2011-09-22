@@ -1,11 +1,11 @@
 #include <QApplication>
-#include "KbParseXml.h"
+#include "KbManager.h"
 
 int main(int argc, char** argv)
 {
     QApplication app(argc,argv);
     
-    KbParseXml my;
-    my.readFile("./save.xml");
+    KbManager manager;
+    manager.loadXmlFile("./save.xml");
     return app.exec();
 }

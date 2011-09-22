@@ -8,11 +8,14 @@
 #include "KbView.h"
 #include "KbPage.h"
 
+class KbKey;
+class KbView;
+class KbPage;
 class KbParseXml
 {
 public:
     KbParseXml();;
-    bool readFile(QString fileName);
+    bool readFile(const QString &fileName);
 private:
     void readViewElement();
     void readKeyboardElement();
