@@ -1,4 +1,5 @@
 #include "KbView.h"
+#include "KbManager.h"
 
 KbView::KbView(QWidget *parent ) : QGraphicsView(parent),m_count(0), m_moveView(false), m_oldGlobalPos(0,0)
 {
@@ -37,6 +38,14 @@ void KbView::mousePressEvent(QMouseEvent *event)
 	{
 	    m_count++;
 	    setSceneNum(m_count);
+	    if(key->text() == "ABC")
+	    {
+		send_a_key(66);
+	    }
+	    else if(key->text() == "123/*")
+	    {
+		send_a_key(66);
+	    }
 	}
 	else if(key->keycode() == -2)
 	{

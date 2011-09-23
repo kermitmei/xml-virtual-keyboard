@@ -131,9 +131,9 @@ void send_a_button()
 void send_a_key(__u16 keyCode)
 {
     // Report BUTTON CLICK - PRESS event
-#ifndef X86_LINUX
+    //for gentoo keycode
     keyCode = keyCode - 8;
-#endif //X86_LINUX
+    
     memset(&event, 0, sizeof(event));
     gettimeofday(&event.time, NULL);
     event.type = EV_KEY;
@@ -160,34 +160,6 @@ void send_a_key(__u16 keyCode)
     event.value = 0;
     ret = write(uinp_fd, &event, sizeof(event));
 }
-
-
-/* This function will open the uInput device. Please make
-   sure that you have inserted the uinput.ko into kernel. */
-
-#  ifdef 0
-int main(void)
-{
-    // Return an error if device not found.
-    if (setup_uinput_device() < 0)
-    {
-	printf("Unable to find uinput device\n");
-	return -1;
-    }
-    sleep(1);
-    send_a_key(KEY_LEFTSHIFT); // Send a "shift" key
-    send_a_key(KEY_A); // Send a "A" key
-
-
-    //    send_click_events(); // Send mouse event
-
-    /* Destroy the input device */
-    ioctl(uinp_fd, UI_DEV_DESTROY);
-    /* Close the UINPUT device */
-    close(uinp_fd);
-    return 0;
-}
-#  endif //#ifdef 0
 
 #else  //No _X86_UINPUT_
 
