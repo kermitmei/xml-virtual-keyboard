@@ -40,7 +40,7 @@ void KbView::mousePressEvent(QMouseEvent *event)
 	}
 	else if(key->keycode() == -2)
 	{
-	    m_count --;
+	    m_count = 0;
 	    setSceneNum(m_count);
 	}
 	return ;

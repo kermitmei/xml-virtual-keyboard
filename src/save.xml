@@ -45,7 +45,7 @@
       <key x="220" y="205" width="101" height="48" text="Alt" background="./pics/wideKey.png" keycode="10" />
       <key x="325" y="205" width="151" height="48" text="Space" background="./pics/wideKey.png" keycode="10" />
       <key x="483" y="155" width="101" height="48" text="" background="./pics/backspace.png" keycode="10" />
-      <key x="5" y="205" width="101" height="48" text="ChangePage" background="./pics/wideKey.png" keycode="-1" />
+      <key x="5" y="205" width="101" height="48" text="abc" background="./pics/wideKey.png" keycode="-1" />
       <key x="5" y="5" width="50" height="48" text="Esc" background="./pics/btn.png" keycode="10" />
       <key x="5" y="54" width="50" height="48" text="Home" background="./pics/btn.png" keycode="10" />
     </page>
@@ -89,7 +89,7 @@
       <key x="216" y="205" width="104" height="48" text="Alt" background="./pics/wideKey.png" keycode="10" />
       <key x="325" y="205" width="154" height="48" text="Space" background="./pics/wideKey.png" keycode="10" />
       <key x="482" y="155" width="102" height="48" text="" background="./pics/backspace.png" keycode="10" />
-      <key x="5" y="205" width="101" height="48" text="ChangePage" background="./pics/wideKey.png" keycode="-2" />
+      <key x="5" y="205" width="101" height="48" text="123/*" background="./pics/wideKey.png" keycode="-1" />
       <key x="535" y="5" width="50" height="48" text="F11" background="./pics/btn.png" keycode="10" />
       <key x="5" y="55" width="50" height="48" text="F12" background="./pics/btn.png" keycode="10" />
       <key x="216" y="155" width="50" height="48" text="c" background="./pics/btn.png" keycode="10" />
@@ -138,7 +138,7 @@
       <key x="216" y="205" width="104" height="48" text="Alt"   background="./pics/wideKey.png" keycode="10" />
       <key x="325" y="205" width="154" height="48" text="Space" background="./pics/wideKey.png" keycode="10" />
       <key x="482" y="155" width="102" height="48" text="" background="./pics/backspace.png" keycode="10" />
-      <key x="5"   y="205" width="101" height="48" text="ChangePage" background="./pics/wideKey.png" keycode="-3" />
+      <key x="5"   y="205" width="101" height="48" text="ABC" background="./pics/wideKey.png" keycode="-2" />
       <key x="5"   y="5"   width="50" height="48" text="~" background="./pics/btn.png" keycode="10" />
       <key x="5"   y="55"  width="50" height="48" text="`" background="./pics/btn.png" keycode="10" />
       <key x="216" y="155" width="50" height="48" text="*" background="./pics/btn.png" keycode="10" />
