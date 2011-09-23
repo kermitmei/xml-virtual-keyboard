@@ -18,7 +18,8 @@ HEADERS += KbKey.h           \
            KbView.h          \
            PixmapBuf.h       \
            UinputInterfact.h \
-           KbManager.h       
+           KbManager.h       \
+           KbCheckable.h
            
 SOURCES += KbKey.cpp         \
            KbPage.cpp        \
@@ -27,7 +28,8 @@ SOURCES += KbKey.cpp         \
            main.cpp          \
            PixmapBuf.cpp     \
            UinputInterfact.c \
-           KbManager.cpp
+           KbManager.cpp     \
+           KbCheckable.cpp
 RESOURCES += pics/images.qrc
 
 

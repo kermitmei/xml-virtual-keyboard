@@ -18,11 +18,7 @@ KbView::~KbView()
     {
 	foreach(QGraphicsItem *item , page->items())
 	{
-	    KbKey *key = dynamic_cast<KbKey *>(item);
-	    if(key != 0)
-	    {
-		delete key;
-	    }
+	    delete item;
 	}
     }
 }
@@ -38,14 +34,6 @@ void KbView::mousePressEvent(QMouseEvent *event)
 	{
 	    m_count++;
 	    setSceneNum(m_count);
-	    if(key->text() == "ABC")
-	    {
-		send_a_key(66);
-	    }
-	    else if(key->text() == "123/*")
-	    {
-		send_a_key(66);
-	    }
 	}
 	else if(key->keycode() == -2)
 	{

@@ -1,17 +1,16 @@
-#ifndef _KBKEY_H_
-#define _KBKEY_H_
+#ifndef _KBCHECKABLE_H_
+#define _KBCHECKABLE_H_
 
 #include <QGraphicsItem>
 #include <QtGui>
 
 #include "KbView.h"
 
-
-class KbKey : public QGraphicsItem
+class KbCheckable : public QGraphicsItem
 {
 public:
-    KbKey();
-    virtual ~KbKey();
+    KbCheckable();
+    virtual ~KbCheckable();
 
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0);
@@ -27,6 +26,10 @@ public:
     {
 	m_height = height;
     }
+    void setCheckable(int checkable = 0)
+    {
+	m_checkable = checkable;
+    }
     void setKeycode(int keycode = 0)
     {
 	m_keycode = keycode;
@@ -36,24 +39,6 @@ public:
 	m_text = text;
     }
     void setBackground(QString background = NULL);
-    /*    {
-	m_background = background;
-	//	m_pixmap = const_cast<QPixmap *>(g_KbManager->getPixmap(background));
-	background.replace(".png", "_pressed.png");
-	m_pixmapPressed = new QPixmap(background);
-	if(m_pixmap->isNull())
-	{
-	    qDebug("m_pixmap is null");
-	    delete m_pixmap;
-	    m_pixmap = 0;
-	}
-	if(m_pixmapPressed->isNull())
-	{
-	    qDebug("m_pixmapPressed is null");
-	    delete m_pixmapPressed;
-	    m_pixmapPressed = 0;
-	}
-	}*/
     int width() const
     {
 	return m_width;
@@ -61,6 +46,10 @@ public:
     int height()const
     {
 	return m_height;
+    }
+    int checkable() const
+    {
+	return m_checkable;
     }
     int keycode()const
     {
@@ -77,6 +66,7 @@ public:
 private:
     int     m_width;
     int     m_height;
+    int     m_checkable;
     int     m_keycode;
     QString m_text;
     QString m_background;
@@ -84,4 +74,4 @@ private:
     QPixmap *m_pixmapPressed;
     bool    m_press;
 };
-#endif//_KBKEY_H_
+#endif//_KBCHECKABLE_H_

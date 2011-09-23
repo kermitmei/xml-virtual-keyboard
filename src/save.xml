@@ -35,10 +35,10 @@
       <key x="535" y="105" width="50" height="48" text="l" background="./pics/btn.png" keycode="46" />
       <key x="110" y="155" width="50" height="48" text="z" background="./pics/btn.png" keycode="52" />
       <key x="325" y="155" width="50" height="48" text="b" background="./pics/btn.png" keycode="56" />
-      <key x="5" y="155" width="101" height="48" text="Shift" background="./pics/wideKey.png" keycode="50" />
+      <key x="5" y="155" width="101" height="48" text="Shift" background="./pics/wideKey.png" keycode="50" checkable="0" />
       <key x="482" y="205" width="102" height="48" text="Enter" background="./pics/wideKey.png" keycode="36" />
-      <key x="111" y="205" width="101" height="48" text="Ctrl" background="./pics/wideKey.png" keycode="37" />
-      <key x="216" y="205" width="104" height="48" text="Alt" background="./pics/wideKey.png" keycode="64" />
+      <key x="111" y="205" width="101" height="48" text="Ctrl" background="./pics/wideKey.png" keycode="37" checkable="0" />
+      <key x="216" y="205" width="104" height="48" text="Alt" background="./pics/wideKey.png" keycode="64" checkable="0" />
       <key x="325" y="205" width="154" height="48" text="Space" background="./pics/wideKey.png" keycode="65" />
       <key x="482" y="155" width="102" height="48" text="" background="./pics/backspace.png" keycode="22" />
       <key x="5" y="205" width="101" height="48" text="ABC" background="./pics/wideKey.png" keycode="-1" />
@@ -87,10 +87,10 @@
       <key x="429" y="155" width="50" height="48" text="M" background="./pics/btn.png" keycode="58" />
       <key x="217" y="155" width="50" height="48" text="C" background="./pics/btn.png" keycode="54" />
       <key x="270" y="155" width="50" height="48" text="V" background="./pics/btn.png" keycode="55" />
-      <key x="5" y="155" width="101" height="48" text="Shift" background="./pics/wideKey.png" keycode="50" />
+      <key x="5" y="155" width="101" height="48" text="Shift" background="./pics/wideKey.png" keycode="50"  checkable="1" />
       <key x="483" y="205" width="101" height="48" text="Enter" background="./pics/wideKey.png" keycode="36" />
-      <key x="115" y="205" width="101" height="48" text="Ctrl" background="./pics/wideKey.png" keycode="37" />
-      <key x="220" y="205" width="101" height="48" text="Alt" background="./pics/wideKey.png" keycode="64" />
+      <key x="115" y="205" width="101" height="48" text="Ctrl" background="./pics/wideKey.png" keycode="37" checkable="0" />
+      <key x="220" y="205" width="101" height="48" text="Alt" background="./pics/wideKey.png" keycode="64" checkable="0" />
       <key x="325" y="205" width="151" height="48" text="Space" background="./pics/wideKey.png" keycode="65" />
       <key x="483" y="155" width="101" height="48" text="" background="./pics/backspace.png" keycode="22" />
       <key x="5" y="205" width="101" height="48" text="123/*" background="./pics/wideKey.png" keycode="-1" />

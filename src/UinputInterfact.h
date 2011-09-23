@@ -26,4 +26,6 @@ void send_a_button();
 
 void send_a_key(__u16 keyCode);
 
+void send_press_key(__u16 keyCode);
+void send_release_key(__u16 keyCode);
 #endif//_UINPUTINTERFACT_H_

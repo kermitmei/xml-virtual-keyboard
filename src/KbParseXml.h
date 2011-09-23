@@ -7,8 +7,10 @@
 #include "KbKey.h"
 #include "KbView.h"
 #include "KbPage.h"
+#include "KbCheckable.h"
 
 class KbKey;
+class KbCheckable;
 class KbView;
 class KbPage;
 class KbParseXml
@@ -23,9 +25,10 @@ private:
     void readKeyElement();
     void skipUnknownElement();
 
-    QXmlStreamReader        reader;
+    QXmlStreamReader        m_reader;
     KbView                  *m_view;
     KbPage                  *m_page;
     KbKey                   *m_key;
+    KbCheckable             *m_checkable;
 };
 #endif//_KBPARSEXML_H_

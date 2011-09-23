@@ -14,7 +14,7 @@ class KbManager
 {
 public:
     KbManager();
-    ~KbManager();
+    virtual ~KbManager();
 
     bool loadXmlFile(const QString &fileName);
     

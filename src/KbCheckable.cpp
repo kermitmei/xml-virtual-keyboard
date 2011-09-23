@@ -1,24 +1,24 @@
-#include "KbKey.h"
+#include "KbCheckable.h"
 #include "KbManager.h"
 
-KbKey::KbKey()
- : m_pixmap(0), m_pixmapPressed(0),
-   m_press(false)
+KbCheckable::KbCheckable()
+    :m_pixmap(0), m_pixmapPressed(0),
+     m_press(false)
 {
     setAcceptedMouseButtons(Qt::LeftButton);
 }
 
-KbKey::~KbKey()
+KbCheckable::~KbCheckable()
 {
     //
 }
 
-QRectF KbKey::boundingRect() const
+QRectF KbCheckable::boundingRect() const
 {
     return QRectF(0,0,m_width, m_height);
 }
 
-void KbKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+void KbCheckable::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     Q_UNUSED(option);
     Q_UNUSED(widget);
@@ -47,27 +47,38 @@ void KbKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     painter->drawText(0,0, m_width, m_height, Qt::AlignCenter, m_text);
 }
 
-void KbKey::mousePressEvent(QGraphicsSceneMouseEvent *event)
+void KbCheckable::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     Q_UNUSED(event);
-    m_press = true;
-#ifdef _X86_UINPUT_
-    if(m_keycode >= 0)
+    if(m_checkable == 0)
     {
-	send_a_key(m_keycode);
-    }
+	m_press = true;
+#ifdef _X86_UINPUT_
+	send_press_key(m_keycode);
 #endif //_X86_UINPUT_
+    }
+    else if(m_checkable == 1)
+    {
+	m_press = false;
+#ifdef _X86_UINPUT_
+	send_release_key(m_keycode);
+#endif //_X86_UINPUT_
+    }
+    m_checkable ++ ;
     update();
 }
 
-void KbKey::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
+void KbCheckable::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 {
-    m_press = false;
+    if(m_checkable == 2)
+    {
+	m_checkable = 0;
+    }
     update();
     QGraphicsItem::mouseReleaseEvent(event);
 }
 
-void KbKey::setBackground(QString background)
+void KbCheckable::setBackground(QString background)
 {
     m_background = background;
     m_pixmap = const_cast<QPixmap *>(g_KbManager->getPixmap(background));

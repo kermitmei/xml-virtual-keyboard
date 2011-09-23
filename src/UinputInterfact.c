@@ -161,6 +161,44 @@ void send_a_key(__u16 keyCode)
     ret = write(uinp_fd, &event, sizeof(event));
 }
 
+void send_press_key(__u16 keyCode)
+{
+    //for gentoo keycode
+    keyCode = keyCode - 8;
+
+    // Report BUTTON CLICK - PRESS event
+    memset(&event, 0, sizeof(event));
+    gettimeofday(&event.time, NULL);
+    event.type = EV_KEY;
+    event.code = keyCode;
+    event.value = 1;
+    ssize_t ret = write(uinp_fd, &event, sizeof(event));
+
+    event.type = EV_SYN;
+    event.code = SYN_REPORT;
+    event.value = 0;
+    ret = write(uinp_fd, &event, sizeof(event));
+}
+
+void send_release_key(__u16 keyCode)
+{
+    //for gentoo keycode
+    keyCode = keyCode - 8;
+
+    // Report BUTTON CLICK - RELEASE event
+    memset(&event, 0, sizeof(event));
+    gettimeofday(&event.time, NULL);
+    event.type = EV_KEY;
+    event.code = keyCode;
+    event.value = 0;
+    ssize_t ret = write(uinp_fd, &event, sizeof(event));
+
+    event.type = EV_SYN;
+    event.code = SYN_REPORT;
+    event.value = 0;
+    ret = write(uinp_fd, &event, sizeof(event));
+}
+
 #else  //No _X86_UINPUT_
 
 int setup_uinput_device()
