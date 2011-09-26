@@ -11,7 +11,7 @@ class KbKey : public QGraphicsItem
 {
 public:
     KbKey();
-    virtual ~KbKey();
+    ~KbKey();
 
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0);
@@ -35,7 +35,7 @@ public:
     {
 	m_text = text;
     }
-    void setBackground(QString background = NULL);
+    void setBackground(QString background = QString());
     /*    {
 	m_background = background;
 	//	m_pixmap = const_cast<QPixmap *>(g_KbManager->getPixmap(background));

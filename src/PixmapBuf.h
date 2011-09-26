@@ -63,9 +63,11 @@ public:
     { /* Do Nothing Here! */ }
     ~PixmapBuf();
 
-    const QPixmap     *getPixmap(const QString &localUrl);
-    const PixmapInfo  *getPixmapInfo(const QString &localUrl);
+    const PixmapInfo *getPixmapInfo(const QString &localUrl, const QPixmap *pixmap = 0);
 
+    const QPixmap    *getPixmap(const QString &localUrl, const QPixmap *pixmap = 0);
+
+    bool  isBuffered(QPixmap *pixmap);
 
     unsigned int sizeOfBytes() const
     { return m_sizeOfBytes; }
@@ -75,7 +77,8 @@ public:
 
 
 protected:
-    Node *findNode(const QString &localUrl);
+    Node *findNode(const QString &localUrl, const QPixmap *pixmap);
+
     void  moveToFirst(Node *node);
     void  push_front(Node *node);
 
