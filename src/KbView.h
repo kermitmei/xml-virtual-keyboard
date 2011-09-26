@@ -13,7 +13,7 @@ class KbView : public QGraphicsView
     Q_OBJECT
 public:
     KbView(QWidget *parent = 0);
-    ~KbView();
+    virtual ~KbView();
     void mousePressEvent(QMouseEvent *event);
     void mouseReleaseEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);

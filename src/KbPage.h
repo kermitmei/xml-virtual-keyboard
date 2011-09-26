@@ -6,6 +6,6 @@ class KbPage : public QGraphicsScene
 {
 public:
     KbPage(QObject *parent = 0);
-    ~KbPage();
+    virtual ~KbPage();
 };
 #endif//_KBPAGE_H_

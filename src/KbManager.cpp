@@ -4,7 +4,7 @@ KbManager *KbManager::m_kbManager(0);
 
 KbManager::KbManager()
 {
-#ifndef _X86_UINPUT_
+#ifdef _X86_UINPUT_
     if(setup_uinput_device() < 0)
     {
 	qDebug("Unable to find uinput device | usr root ");
@@ -16,10 +16,10 @@ KbManager::KbManager()
 
 KbManager::~KbManager()
 {
-#ifndef X86_LINUX
+#ifdef _X86_UINPUT_
     ioctl(uinp_fd, UI_DEV_DESTROY);
     ::close(uinp_fd);
-#endif //X86_LINUX
+#endif //_X86_UINPUT_
     foreach(KbView *view, m_kbViewList)
     {
 	if(view != 0)

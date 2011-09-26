@@ -1,4 +1,5 @@
 #include "KbView.h"
+#include "KbManager.h"
 
 KbView::KbView(QWidget *parent ) : QGraphicsView(parent),m_count(0), m_moveView(false), m_oldGlobalPos(0,0)
 {
@@ -17,11 +18,7 @@ KbView::~KbView()
     {
 	foreach(QGraphicsItem *item , page->items())
 	{
-	    KbKey *key = dynamic_cast<KbKey *>(item);
-	    if(key != 0)
-	    {
-		delete key;
-	    }
+	    delete item;
 	}
     }
 }

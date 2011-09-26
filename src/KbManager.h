@@ -5,18 +5,16 @@
 #include "PixmapBuf.h"
 #include "KbKey.h"
 
-#ifndef X86_LINUX
 extern "C"{
 #include "UinputInterfact.h"
 }
-#endif
 
 #define g_KbManager KbManager::instance()
 class KbManager 
 {
 public:
     KbManager();
-    ~KbManager();
+    virtual ~KbManager();
 
     bool loadXmlFile(const QString &fileName);
     
