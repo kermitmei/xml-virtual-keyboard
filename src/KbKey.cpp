@@ -51,12 +51,10 @@ void KbKey::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     Q_UNUSED(event);
     m_press = true;
-#ifdef _X86_UINPUT_
+#ifndef X86_LINUX
     if(m_keycode >= 0)
-    {
 	send_a_key(m_keycode);
-    }
-#endif //_X86_UINPUT_
+#endif
     update();
 }
 
