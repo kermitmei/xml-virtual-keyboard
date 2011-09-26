@@ -27,6 +27,14 @@ void KbView::mousePressEvent(QMouseEvent *event)
 {
     m_timer->start(1000);
     m_oldGlobalPos = event->globalPos();
+    QGraphicsView::mousePressEvent(event);
+}
+
+void KbView::mouseReleaseEvent(QMouseEvent *event)
+{
+    setCursor(Qt::ArrowCursor);
+    m_timer->stop();
+    m_moveView = false;
     KbKey *key = dynamic_cast<KbKey *>(itemAt(event->pos()));
     if(key != 0 && key->keycode() < 0)
     {
@@ -40,16 +48,7 @@ void KbView::mousePressEvent(QMouseEvent *event)
 	    m_count = 0;
 	    setSceneNum(m_count);
 	}
-	return ;
     }
-    QGraphicsView::mousePressEvent(event);
-}
-
-void KbView::mouseReleaseEvent(QMouseEvent *event)
-{
-    setCursor(Qt::ArrowCursor);
-    m_timer->stop();
-    m_moveView = false;
     QGraphicsView::mouseReleaseEvent(event);
 }
 

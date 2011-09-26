@@ -69,7 +69,9 @@ void KbKey::setBackground(QString background)
 {
     m_background = background;
     m_pixmap = const_cast<QPixmap *>(g_KbManager->getPixmap(background));
+    m_pixmap = const_cast<QPixmap *>(g_KbManager->getPixmap(background, m_pixmap));
     background.replace(".png", "_pressed.png");
     m_pixmapPressed = const_cast<QPixmap *>(g_KbManager->getPixmap(background));
+    m_pixmapPressed = const_cast<QPixmap *>(g_KbManager->getPixmap(background,m_pixmapPressed));
     
 }

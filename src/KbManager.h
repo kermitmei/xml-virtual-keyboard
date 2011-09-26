@@ -23,9 +23,9 @@ public:
     {
 	return m_kbViewList;
     }
-    const QPixmap* getPixmap(const QString &localUrl)
+    const QPixmap* getPixmap(const QString &localUrl, const QPixmap *pixmap = 0)
     {
-	return m_pixmapBuf.getPixmap(localUrl);
+	return m_pixmapBuf.getPixmap(localUrl, pixmap);
     }
 protected:
     QList<KbView *>  m_kbViewList;
