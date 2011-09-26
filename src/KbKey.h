@@ -35,7 +35,7 @@ public:
     {
 	m_text = text;
     }
-    void setBackground(QString background = NULL);
+    void setBackground(const QString &background = QString());
     /*    {
 	m_background = background;
 	//	m_pixmap = const_cast<QPixmap *>(g_KbManager->getPixmap(background));

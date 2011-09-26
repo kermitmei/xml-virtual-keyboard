@@ -34,42 +34,10 @@ PixmapBuf::~PixmapBuf()
     }
 }
 
-const QPixmap *PixmapBuf::getPixmap(const QString &localUrl)
+const PixmapInfo *PixmapBuf::getPixmapInfo(const QString &localUrl,
+					   const QPixmap *pixmap)
 {
-    Node *rest = findNode(localUrl);
-
-    if(rest) {
-	moveToFirst(rest);
-	return rest->m_pixmapInfo->pixmap();
-    }
-
-    //The rest doesn't exist.
-    QFileInfo fileInfo(localUrl);
-    if(!fileInfo.exists()) {
-	qDebug("File (%s) Not be found!", qPrintable(localUrl));
-	return 0;
-    }
-
-    //Create pixmap first
-    QPixmap *pixmap = new QPixmap(localUrl);
-    if(pixmap->isNull()) {
-	delete pixmap;
-	return 0;
-    }
-
-    //create the PixmapInfo and then Node object.
-    PixmapInfo *pixmapInfo = 
-	new PixmapInfo(localUrl,fileInfo.lastModified(),pixmap);
-    rest = new Node(pixmapInfo);
-
-    //New node should be move to the first.
-    push_front(rest);
-    return rest->m_pixmapInfo->pixmap();
-}
-
-const PixmapInfo *PixmapBuf::getPixmapInfo(const QString &localUrl)
-{
-    Node *rest = findNode(localUrl);
+    Node *rest = findNode(localUrl, pixmap);
 
     if(rest) {
 	moveToFirst(rest);
@@ -84,15 +52,15 @@ const PixmapInfo *PixmapBuf::getPixmapInfo(const QString &localUrl)
     }
 
     //Create pixmap first
-    QPixmap *pixmap = new QPixmap(localUrl);
-    if(pixmap->isNull()) {
-	delete pixmap;
+    QPixmap *newPixmap = new QPixmap(localUrl);
+    if(newPixmap->isNull()) {
+	delete newPixmap;
 	return 0;
     }
 
     //create the PixmapInfo and then Node object.
     PixmapInfo *pixmapInfo = 
-	new PixmapInfo(localUrl,fileInfo.lastModified(),pixmap);
+	new PixmapInfo(localUrl,fileInfo.lastModified(),newPixmap);
     rest = new Node(pixmapInfo);
 
     //New node should be move to the first.
@@ -100,12 +68,54 @@ const PixmapInfo *PixmapBuf::getPixmapInfo(const QString &localUrl)
     return rest->m_pixmapInfo;
 }
 
-PixmapBuf::Node *PixmapBuf::findNode(const QString &localUrl)
+const QPixmap *PixmapBuf::getPixmap(const QString &localUrl, const QPixmap *pixmap)
+{
+    Node *rest = findNode(localUrl, pixmap);
+
+    if(rest) {
+	moveToFirst(rest);
+	return rest->m_pixmapInfo->pixmap();
+    }
+
+    //The rest doesn't exist.
+    QFileInfo fileInfo(localUrl);
+    if(!fileInfo.exists()) {
+	qDebug("File (%s) Not be found!", qPrintable(localUrl));
+	return 0;
+    }
+
+    //Create pixmap first
+    QPixmap *newPixmap = new QPixmap(localUrl);
+    if(newPixmap->isNull()) {
+	delete newPixmap;
+	return 0;
+    }
+
+    //create the PixmapInfo and then Node object.
+    PixmapInfo *pixmapInfo = 
+	new PixmapInfo(localUrl,fileInfo.lastModified(),newPixmap);
+    rest = new Node(pixmapInfo);
+
+    //New node should be move to the first.
+    push_front(rest);
+    return rest->m_pixmapInfo->pixmap();
+}
+
+PixmapBuf::Node *PixmapBuf::findNode(const QString &localUrl, const QPixmap *pixmap)
 {
     Node *currNode = m_head;
     while(currNode != 0) {
-	if(currNode->localUrl() == localUrl) {
-	    return currNode;
+	if(pixmap) {
+	    if(currNode->m_pixmapInfo->m_pixmap == pixmap) {
+	        if(currNode->localUrl() == localUrl) 
+		    return currNode;
+	    }else {
+		return 0;
+	    }
+	}else {
+	    if(currNode->localUrl() == localUrl) {
+		return currNode;
+	    }
 	}
 	currNode = currNode->m_next;
     }
